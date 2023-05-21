@@ -2,7 +2,7 @@
 
 Tenemos 3 Raspberry Pi, con las cuales queremos montar un cluster e instalar y configurar un NSF (Network System File).
 
-## SOFTWARE
+## HARDWARE
 
 ### Modelos de Raspberry
 
@@ -11,6 +11,8 @@ Tenemos los siguientes modelos y los siguientes sistemas operativos:
     - Raspberry Pi Model A+: Raspberry Pi OS (32-bits) Desktop
     - Raspberry Pi 2 Model B: Raspberry Pi OS (32-bits) Desktop
     - Raspberry Pi 4 Model B: Raspberry Pi OS (32-bits) Desktop
+
+## SOFTWARE
 
 ### Instalación y configuración básica SO
 
@@ -38,8 +40,6 @@ Ahora configuraremos los ssh de las maquinas para que de esta manera podamos con
 
     - ssh-keygen -t rsa -C <hostname>:<username>
     - ssh-copy-id <remotehostname> (Para copiarlo a los demas hosts)
-
-## DEMO
 
 ### Entorno
 
