@@ -37,7 +37,7 @@ Para configurar y habilitar ssh, usaremos el comando **sudo raspi-config** de es
 Ahora configuraremos los ssh de las maquinas para que de esta manera podamos conectarnos y pasar archivos entre los hosts sin necesidad de credenciales.
 
     - ssh-keygen -t rsa -C <hostname>:<username>
-    - ssh-copy-id <remotehostname> (En los demas hosts)
+    - ssh-copy-id <remotehostname> (Para copiarlo a los demas hosts)
 
 ## DEMO
 
@@ -57,9 +57,12 @@ Estos pasos los hacemos en cada uno de los hosts.
 ### Servidor NFS (Modelo 4)
 
 Creamos una carpeta que compartan todos los hosts en la red, y será donde coloquemos los ficheros:
-
-**sudo apt-get install nfs-kernel-server**
-**mkdir ~/cloud**
+    
+    - ssh-keygen -t rsa -C <hostname>:<username>
+    - ssh-copy-id <remotehostname> (En los demas hosts)
+    
+    - **sudo apt-get install nfs-kernel-server**
+    - **mkdir ~/cloud**
 
 Creamos una entrada en **/etc/exports**
 
