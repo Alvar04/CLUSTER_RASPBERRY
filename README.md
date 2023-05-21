@@ -61,15 +61,13 @@ Creamos una carpeta que compartan todos los hosts en la red, y será donde coloq
     - ssh-keygen -t rsa -C <hostname>:<username>
     - ssh-copy-id <remotehostname> (En los demas hosts)
     
-    - **sudo apt-get install nfs-kernel-server**
-    - **mkdir ~/cloud**
-
 Creamos una entrada en **/etc/exports**
 
-**sudo nano /etc/exports**
+    - sudo nano /etc/exports
 
 Y agregamos al final:
-**/home/ap/cloud *(rw,sync,no_root_squash,no_subtree_check)**
+    
+    - /home/ap/cloud *(rw,sync,no_root_squash,no_subtree_check)
 
 Y a continuacion hacemos **sudo exportfs -a** o podemos reiniciar el servicio **sudo service nfs-kernel-server restart**
 
@@ -77,9 +75,9 @@ Y a continuacion hacemos **sudo exportfs -a** o podemos reiniciar el servicio **
 
 En los demas hosts hay que configurar el cliente nfs:
 
-**sudo apt-get install nfs-common**
-**mkdir ~/cloud**
-**sudo mount -t nfs <serverhostname>:/home/ap/cloud ~/cloud**
+    - sudo apt-get install nfs-common
+    - mkdir ~/cloud
+    - sudo mount -t nfs <serverhostname>:/home/ap/cloud ~/cloud
 
 Para montar de manera permante el mount modificamos el fichero **/etc/fstab** añadiendo la siguiente linea:
 
@@ -89,13 +87,13 @@ Para montar de manera permante el mount modificamos el fichero **/etc/fstab** a�
 
 Machinefile es un fichero en el que indicaremos el numero de procesos que ejcutara cada máquina, con el siguiente formato (en el directorio *~/cloud* **nano machinefile**):
 
-<hostname>:<numero_de_procesos>
+    - <hostname>:<numero_de_procesos>
 
 ### Compilacion y ejecucion
 
 Primero tenemos que pasar el fichero de codigo al servidor nfs con scp:
 
-**scp fichero <username_servidor>@<serverhosts>:/home/ap/cloud**
+    - scp fichero <username_servidor>@<serverhosts>:/home/ap/cloud
 
 Para compilar usaremos lo siguiente (lo compilaremos en el servidor):
 
