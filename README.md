@@ -1,8 +1,6 @@
 # CLUSTER_RASPBERRY
 
-Tenemos 4 Raspberry Pi, con las cuales queremos montar un cluster e instalar y configurar un NSF (Network System File).
-
-<https://www.raspberrypi.com/tutorials/cluster-raspberry-pi-tutorial/>
+Tenemos 3 Raspberry Pi, con las cuales queremos montar un cluster e instalar y configurar un NSF (Network System File).
 
 ## SOFTWARE
 
@@ -28,7 +26,7 @@ Para comenzar vamos a seguir los siguiente pasos:
    4. Write: escribimos el S.O en la SD.
 4. Una vez terminada la instalación del S.O, procedemos encender nuestra Raspberry y configurar el sistema.
 5. Una vez encendida nuestra Raspberry con la SD introducida y un teclado puesto, podemos configurar parametros básicos:
-   1. Raspberry Pi Model A+: Podemos configurar parámetros como zona horaria, teclado y usuario/contraseña:
+   1. Podemos configurar parámetros como zona horaria, teclado y usuario/contraseña:
       1. Usuario: ap
       2. Password: ap2023
 
