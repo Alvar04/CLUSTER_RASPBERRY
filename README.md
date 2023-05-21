@@ -36,8 +36,8 @@ Para configurar y habilitar ssh, usaremos el comando **sudo raspi-config** de es
 
 Ahora configuraremos los ssh de las maquinas para que de esta manera podamos conectarnos y pasar archivos entre los hosts sin necesidad de credenciales.
 
-    - **ssh-keygen -t rsa -C <hostname>:<username>**
-    - **ssh-copy-id <remotehostname> (En los demas hosts)**
+    - ssh-keygen -t rsa -C <hostname>:<username>
+    - ssh-copy-id <remotehostname> (En los demas hosts)
 
 ## DEMO
 
@@ -50,7 +50,7 @@ Siguiente paso es la instalación de los paquetenes necesarios:
 - Generales: bluid-essential, mpich, mpich-doc, libmpich2-3, limbmpich-dev, mpi.
 - Python: pip install mpi4py.
 
-Ahora para la configuración de lo host y sus IPs usaremos el fichero **/etc/hoats/**  con el formato. <ip> <hostname>
+Ahora para la configuración de lo host y sus IPs usaremos el fichero **/etc/hosts/**  con el formato. <ip> <hostname>
 
 Estos pasos los hacemos en cada uno de los hosts.
 
