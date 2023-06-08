@@ -4,7 +4,7 @@
 <image width="460" src="/Raspberry_Cluster/LOGO_PI.png" alt="Raspberry Pi Arquitecturas Paralelas" caption="Raspberry Pi Arquitecturas Paralelas">
 </p>
     
-### Autores:
+## Autores:
     - Álvaro Palacios Criado
     - Rafael Carlos Díaz Mata
     - Adolfo Fernández Gil
