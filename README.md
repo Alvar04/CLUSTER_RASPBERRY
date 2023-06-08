@@ -4,10 +4,10 @@
 <image width="460" src="/Raspberry_Cluster/LOGO_PI.png" alt="Raspberry Pi Arquitecturas Paralelas" caption="Raspberry Pi Arquitecturas Paralelas">
 </p>
     
-## Autores:
-    - Álvaro Palacios Criado
-    - Rafael Carlos Díaz Mata
-    - Adolfo Fernández Gil
+### Autores:
+- Álvaro Palacios Criado
+- Rafael Carlos Díaz Mata
+- Adolfo Fernández Gil
 
 Tenemos 3 Raspberry Pi, con las cuales queremos montar un cluster e instalar y configurar un NSF (Network System File).
 
