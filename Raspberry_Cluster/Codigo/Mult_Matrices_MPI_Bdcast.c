@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <mpi.h>
 #include <time.h>
-#include <omp.h>
 
 #define M_SIZE 1024
 
@@ -26,9 +25,6 @@ int main(int argc, char *argv[]) {
 
     int rank, size;
     
-
-    
-
     MPI_Init(&argc, &argv);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &size);
@@ -42,7 +38,7 @@ int main(int argc, char *argv[]) {
     MPI_Bcast(B, M_SIZE * M_SIZE, MPI_FLOAT, 0, MPI_COMM_WORLD);
     MPI_Scatter(A, local_size * M_SIZE, MPI_FLOAT, local_C, local_size * M_SIZE, MPI_FLOAT, 0, MPI_COMM_WORLD);
     
-    double start_time = omp_get_wtime();
+    double start_time = MPI_Wtime();
 
     for (int i = 0; i < M_SIZE / size; i++) {
         for (int j = 0; j < M_SIZE; j++) {
@@ -52,9 +48,9 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    double end_time = omp_get_wtime();
-
     MPI_Gather(local_C, local_size * M_SIZE, MPI_FLOAT, global_C, local_size * M_SIZE, MPI_FLOAT, 0, MPI_COMM_WORLD);
+    
+    double end_time = MPI_Wtime();
 
     if (rank == 0) {
         double elapsed_time = end_time - start_time;
