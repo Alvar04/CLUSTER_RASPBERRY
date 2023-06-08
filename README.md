@@ -1,7 +1,7 @@
 # CLUSTER_RASPBERRY
 
 <p align="center">
-<image width="460" src="/Raspberry_Culster/LOGO_PI.png" alt="Raspberry Pi Arquitecturas Paralelas" caption="Raspberry Pi Arquitecturas Paralelas">
+<image width="460" src="/Raspberry_Cluster/LOGO_PI.png" alt="Raspberry Pi Arquitecturas Paralelas" caption="Raspberry Pi Arquitecturas Paralelas">
 </p>
     
 Autores:
