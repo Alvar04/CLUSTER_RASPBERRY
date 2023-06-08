@@ -5,9 +5,9 @@
 </p>
     
 Autores:
-    Álvaro Palacios Criado
-    Rafael Carlos Díaz Mata
-    Adolfo Fernández Gil
+    - Álvaro Palacios Criado
+    - Rafael Carlos Díaz Mata
+    - Adolfo Fernández Gil
 
 Tenemos 3 Raspberry Pi, con las cuales queremos montar un cluster e instalar y configurar un NSF (Network System File).
 
