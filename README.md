@@ -1,5 +1,14 @@
 # CLUSTER_RASPBERRY
 
+<p align="center">
+<image width="460" src="/Raspberry_Culster/LOGO_PI.png" alt="Raspberry Pi Arquitecturas Paralelas" caption="Raspberry Pi Arquitecturas Paralelas">
+</p>
+    
+Autores:
+    Álvaro Palacios Criado
+    Rafael Carlos Díaz Mata
+    Adolfo Fernández Gil
+
 Tenemos 3 Raspberry Pi, con las cuales queremos montar un cluster e instalar y configurar un NSF (Network System File).
 
 ## HARDWARE
@@ -79,9 +88,6 @@ En los demas hosts hay que configurar el cliente nfs:
     - mkdir ~/cloud
     - sudo mount -t nfs <serverhostname>:/home/ap/cloud ~/cloud
 
-Para montar de manera permante el mount modificamos el fichero **/etc/fstab** añadiendo la siguiente linea:
-
-**Comando**
 
 ### Machinefile
 
@@ -102,5 +108,5 @@ Para compilar usaremos lo siguiente (lo compilaremos en el servidor):
 
 Para ejecutar usaremos lo siguiente:
 
-- C: mpirun o mpiexec -f machinefile <ejecutable> 
-- Python: mpiexec -f machinefile python <ejecutable>
+- C: mpirun o mpiexec -f machinefile <ejecutable>
+- Python: mpiexec -f machinefile python <ejecutable> 
